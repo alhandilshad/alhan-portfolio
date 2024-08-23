@@ -13,7 +13,7 @@ import { FaGithub } from "react-icons/fa";
 const Skills = () => {
   return (
     <>
-      <div className="mb-28">
+      <div className="mb-32">
         <h1 className="text-[32px] sm:text-[40px] font-[800] uppercase text-center">Skills</h1>
         <p className="text-center pt-3 text-sm sm:text-base">
           Here are the technologies and tools I work with to bring ideas to life.
