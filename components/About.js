@@ -1,9 +1,10 @@
+import Link from 'next/link';
 import React from 'react';
 
 const About = () => {
   return (
     <>
-      <div className='flex flex-col-reverse md:flex-row justify-center items-center gap-10 md:gap-20 mt-16 px-4 md:px-0'>
+      <div className='flex flex-col-reverse md:flex-row justify-center items-center gap-10 md:gap-20 mt-16 px-4 md:px-0' id='about'>
         <div className='w-full flex justify-center md:w-auto'>
           <img src='/about-us.png' className='w-full md:w-auto max-w-xs md:max-w-none' />
         </div>

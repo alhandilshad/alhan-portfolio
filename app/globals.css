@@ -10,3 +10,12 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+#contactBack{
+    background-image: url(../public/subscribe-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 65vh;
+    width: 75%;
+}

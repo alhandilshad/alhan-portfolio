@@ -6,6 +6,7 @@ import { FaLinkedinIn, FaGithub, FaInstagram, FaBars, FaTimes } from "react-icon
 const Header = () => {
   const [shadow, setShadow] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
@@ -18,6 +19,20 @@ const Header = () => {
       } else {
         setShadow(false);
       }
+
+      const sections = ["about", "services", "skills", "portfolio", "testimonials", "contact"];
+      const scrollPos = window.scrollY;
+
+      sections.forEach((section) => {
+        const element = document.getElementById(section);
+        if (element) {
+          const sectionTop = element.offsetTop;
+          const sectionBottom = sectionTop + element.offsetHeight;
+          if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+            setActiveSection(section);
+          }
+        }
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -25,6 +40,11 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleLinkClick = (section) => {
+    setActiveSection(section);
+    setIsOpen(false); // Close the mobile menu after clicking a link
+  };
 
   return (
     <>
@@ -34,34 +54,60 @@ const Header = () => {
         } md:bg-white bg-black`}
       >
         <div>
-          <h1
-            className="text-4xl font-bold bg-clip-text text-transparent"
-            style={{
-              backgroundImage:
-                "linear-gradient(to right, #4458dc 0%, #854fee 100%), radial-gradient(circle at top left, #4458dc, #854fee)",
-            }}
-          >
-            ALHAN
-          </h1>
+          <Link href="/">
+            <h1
+              className="text-4xl font-bold bg-clip-text text-transparent cursor-pointer"
+              style={{
+                backgroundImage:
+                  "linear-gradient(to right, #4458dc 0%, #854fee 100%), radial-gradient(circle at top left, #4458dc, #854fee)",
+              }}
+            >
+              ALHAN
+            </h1>
+          </Link>
         </div>
 
         <div className="hidden md:flex justify-center items-center gap-10">
-          <Link href="#about" className="uppercase font-semibold tracking-tighter hover:text-[#4458dc] duration-300">
+          <Link
+            href="/#about"
+            onClick={() => handleLinkClick("about")}
+            className={`uppercase font-semibold tracking-tighter ${activeSection === "about" ? "text-[#4458dc]" : "hover:text-[#4458dc]"} duration-300`}
+          >
             About
           </Link>
-          <Link href="#services" className="uppercase font-semibold tracking-tighter hover:text-[#4458dc] duration-300">
+          <Link
+            href="/#services"
+            onClick={() => handleLinkClick("services")}
+            className={`uppercase font-semibold tracking-tighter ${activeSection === "services" ? "text-[#4458dc]" : "hover:text-[#4458dc]"} duration-300`}
+          >
             Services
           </Link>
-          <Link href="#skills" className="uppercase font-semibold tracking-tighter hover:text-[#4458dc] duration-300">
+          <Link
+            href="/#skills"
+            onClick={() => handleLinkClick("skills")}
+            className={`uppercase font-semibold tracking-tighter ${activeSection === "skills" ? "text-[#4458dc]" : "hover:text-[#4458dc]"} duration-300`}
+          >
             Skills
           </Link>
-          <Link href="#portfolio" className="uppercase font-semibold tracking-tighter hover:text-[#4458dc] duration-300">
+          <Link
+            href="/#portfolio"
+            onClick={() => handleLinkClick("portfolio")}
+            className={`uppercase font-semibold tracking-tighter ${activeSection === "portfolio" ? "text-[#4458dc]" : "hover:text-[#4458dc]"} duration-300`}
+          >
             Portfolio
           </Link>
-          <Link href="#blog" className="uppercase font-semibold tracking-tighter hover:text-[#4458dc] duration-300">
-            Blog
+          <Link
+            href="/#testimonials"
+            onClick={() => handleLinkClick("testimonials")}
+            className={`uppercase font-semibold tracking-tighter ${activeSection === "testimonials" ? "text-[#4458dc]" : "hover:text-[#4458dc]"} duration-300`}
+          >
+            Testimonials
           </Link>
-          <Link href="#contact" className="uppercase font-semibold tracking-tighter hover:text-[#4458dc] duration-300">
+          <Link
+            href="/#contact"
+            onClick={() => handleLinkClick("contact")}
+            className={`uppercase font-semibold tracking-tighter ${activeSection === "contact" ? "text-[#4458dc]" : "hover:text-[#4458dc]"} duration-300`}
+          >
             Contact
           </Link>
         </div>
@@ -103,24 +149,48 @@ const Header = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden fixed w-full bg-black text-white shadow-md py-4">
+        <div className="md:hidden sticky z-10 top-20 w-full bg-black text-white shadow-md py-4">
           <div className="flex flex-col items-center gap-6">
-            <Link href="#about" className="uppercase font-semibold tracking-tighter hover:text-[#4458dc] duration-300">
+            <Link
+              href="/#about"
+              onClick={() => handleLinkClick("about")}
+              className={`uppercase font-semibold tracking-tighter ${activeSection === "about" ? "text-[#4458dc]" : "hover:text-[#4458dc]"} duration-300`}
+            >
               About
             </Link>
-            <Link href="#services" className="uppercase font-semibold tracking-tighter hover:text-[#4458dc] duration-300">
+            <Link
+              href="/#services"
+              onClick={() => handleLinkClick("services")}
+              className={`uppercase font-semibold tracking-tighter ${activeSection === "services" ? "text-[#4458dc]" : "hover:text-[#4458dc]"} duration-300`}
+            >
               Services
             </Link>
-            <Link href="#skills" className="uppercase font-semibold tracking-tighter hover:text-[#4458dc] duration-300">
+            <Link
+              href="/#skills"
+              onClick={() => handleLinkClick("skills")}
+              className={`uppercase font-semibold tracking-tighter ${activeSection === "skills" ? "text-[#4458dc]" : "hover:text-[#4458dc]"} duration-300`}
+            >
               Skills
             </Link>
-            <Link href="#portfolio" className="uppercase font-semibold tracking-tighter hover:text-[#4458dc] duration-300">
+            <Link
+              href="/#portfolio"
+              onClick={() => handleLinkClick("portfolio")}
+              className={`uppercase font-semibold tracking-tighter ${activeSection === "portfolio" ? "text-[#4458dc]" : "hover:text-[#4458dc]"} duration-300`}
+            >
               Portfolio
             </Link>
-            <Link href="#blog" className="uppercase font-semibold tracking-tighter hover:text-[#4458dc] duration-300">
-              Blog
+            <Link
+              href="/#testimonials"
+              onClick={() => handleLinkClick("testimonials")}
+              className={`uppercase font-semibold tracking-tighter ${activeSection === "testimonials" ? "text-[#4458dc]" : "hover:text-[#4458dc]"} duration-300`}
+            >
+              Testimonials
             </Link>
-            <Link href="#contact" className="uppercase font-semibold tracking-tighter hover:text-[#4458dc] duration-300">
+            <Link
+              href="/#contact"
+              onClick={() => handleLinkClick("contact")}
+              className={`uppercase font-semibold tracking-tighter ${activeSection === "contact" ? "text-[#4458dc]" : "hover:text-[#4458dc]"} duration-300`}
+            >
               Contact
             </Link>
 

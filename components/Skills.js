@@ -13,12 +13,12 @@ import { FaGithub } from "react-icons/fa";
 const Skills = () => {
   return (
     <>
-      <div className="mb-32">
+      <div className="mb-40" id="skills">
         <h1 className="text-[32px] sm:text-[40px] font-[800] uppercase text-center">Skills</h1>
-        <p className="text-center pt-3 text-sm sm:text-base">
+        <p className="text-center pt-3 text-sm sm:text-base text-[#777777]">
           Here are the technologies and tools I work with to bring ideas to life.
         </p>
-        <div className="flex flex-col justify-center items-center gap-10 sm:gap-14 mt-12 sm:mt-20">
+        <div className="flex flex-col justify-center items-center gap-10 sm:gap-14 mt-12 sm:mt-28">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:flex justify-center items-center gap-6 md:gap-10 lg:gap-20">
             <div className="group flex flex-col items-center cursor-pointer">
               <FaHtml5 className="text-[60px] sm:text-[70px] md:text-[80px] lg:text-[90px] text-[#e34c26] group-hover:scale-110 transition duration-300" />

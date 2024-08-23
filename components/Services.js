@@ -3,11 +3,11 @@ import React from "react";
 const Services = () => {
   return (
     <>
-      <div className="mt-16 mb-10 lg:mt-28 lg:mb-28">
+      <div className="mt-16 mb-10 lg:mt-28 lg:mb-32" id="services">
         <h1 className="text-center text-2xl lg:text-4xl font-[800] uppercase">
           service offers
         </h1>
-        <p className="text-center pt-2 lg:pt-3 text-sm lg:text-base">
+        <p className="text-center pt-2 lg:pt-4 text-sm lg:text-base text-[#777777]">
           Here are some of the key services I offer as a Frontend Developer.
         </p>
         <div className="flex flex-wrap justify-center items-center gap-6 mt-16 lg:mt-28">
