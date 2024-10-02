@@ -17,7 +17,7 @@ const About = () => {
           <p className='text-[#777777] pt-3 md:pt-5 text-sm md:text-base'>
             I have experience working on a variety of projects, from e-commerce websites to dynamic web applications, always striving for clean code, responsive design, and accessibility. My goal is to continuously learn and grow, adapting to the latest trends and technologies in frontend development.
           </p>
-          <a href='/Alhan-Dilshad (1).pdf' download>
+          <a href='/My Resume.pdf' download>
             <button className="text-white text-[13px] md:text-[15px] px-6 py-2 md:px-8 md:py-3 rounded-md font-semibold mt-6 md:mt-8 duration-500 shadow-[0px_10px_30px_rgba(118,85,225,0.3)] bg-origin-border bg-clip-border border-2 border-transparent bg-[linear-gradient(to_right,#4458dc_0%,#854fee_100%),radial-gradient(circle_at_top_left,#4458dc,#854fee)] hover:bg-[linear-gradient(#ffffff,#ffffff),radial-gradient(circle_at_top_left,#4458dc,#854fee)] hover:border-2 hover:border-[#854fee] hover:text-[#222222] hover:shadow-none hover:bg-clip-border">
               DOWNLOAD CV
             </button>
