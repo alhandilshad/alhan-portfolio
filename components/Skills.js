@@ -1,5 +1,5 @@
 import React from "react";
-import { FaHtml5 } from "react-icons/fa";
+import { FaHtml5, FaNodeJs } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { RiReactjsFill } from "react-icons/ri";
@@ -9,6 +9,7 @@ import { IoLogoFirebase } from "react-icons/io5";
 import { BiLogoTypescript } from "react-icons/bi";
 import { TbBrandVite } from "react-icons/tb";
 import { FaGithub } from "react-icons/fa";
+import { SiSupabase } from "react-icons/si";
 
 const Skills = () => {
   return (
@@ -41,15 +42,23 @@ const Skills = () => {
               <p className="mt-2 text-center text-sm sm:text-xl">Next.js</p>
             </div>
             <div className="group flex flex-col items-center cursor-pointer">
+              <FaNodeJs className="text-[60px] sm:text-[70px] md:text-[80px] lg:text-[90px] text-[#6cc24a] group-hover:scale-110 transition duration-300" />
+              <p className="mt-2 text-center text-sm sm:text-xl">Node.js</p>
+            </div>
+            <div className="group flex flex-col items-center cursor-pointer">
               <IoLogoFirebase className="text-[60px] sm:text-[70px] md:text-[80px] lg:text-[90px] text-[#ffca28] group-hover:scale-110 transition duration-300" />
               <p className="mt-2 text-center text-sm sm:text-xl">Firebase</p>
             </div>
             <div className="group flex flex-col items-center cursor-pointer">
-              <BiLogoTypescript className="text-[60px] sm:text-[70px] md:text-[80px] lg:text-[90px] text-[#007acc] group-hover:scale-110 transition duration-300" />
-              <p className="mt-2 text-center text-sm sm:text-xl">TypeScript</p>
+              <SiSupabase className="text-[60px] sm:text-[70px] md:text-[80px] lg:text-[90px] text-[#3ECF8E] group-hover:scale-110 transition duration-300" />
+              <p className="mt-2 text-center text-sm sm:text-xl">Supabase</p>
             </div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:flex justify-center items-center gap-6 md:gap-10 lg:gap-20">
+            <div className="group flex flex-col items-center cursor-pointer">
+              <BiLogoTypescript className="text-[60px] sm:text-[70px] md:text-[80px] lg:text-[90px] text-[#007acc] group-hover:scale-110 transition duration-300" />
+              <p className="mt-2 text-center text-sm sm:text-xl">TypeScript</p>
+            </div>
             <div className="group flex flex-col items-center cursor-pointer">
               <RiTailwindCssFill className="text-[60px] sm:text-[70px] md:text-[80px] lg:text-[90px] text-[#06b6d4] group-hover:scale-110 transition duration-300" />
               <p className="mt-2 text-center text-sm sm:text-xl">Tailwind CSS</p>

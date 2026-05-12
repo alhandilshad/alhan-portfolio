@@ -8,7 +8,7 @@ const Services = () => {
           service offers
         </h1>
         <p className="text-center pt-2 lg:pt-4 text-sm lg:text-base text-[#777777]">
-          Here are some of the key services I offer as a Frontend Developer.
+          Here are some of the key services I offer as a Full Stack Developer.
         </p>
         <div className="flex flex-wrap justify-center items-center gap-6 mt-16 lg:mt-28">
           <div className="w-[80%] sm:w-[45%] md:w-[30%] lg:w-[18%] h-[35vh] md:h-[40vh] lg:h-[48vh] bg-[#f9f9fd] hover:bg-white hover:shadow-custom duration-500 cursor-pointer flex flex-col justify-center items-center gap-5">

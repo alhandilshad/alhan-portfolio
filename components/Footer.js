@@ -44,7 +44,7 @@ const Footer = () => {
           </Link>
         </div>
         <div className="flex md:flex-row flex-col justify-center items-center text-[#777777] gap-1">
-          <p>Copyright ©2024 All rights reserved |</p>
+          <p>Copyright ©2026 All rights reserved |</p>
           <p>This Portfolio is made with</p>
           <CiHeart className="text-xl" /> by
           <p className="text-blue-700 font-semibold">ALHAN</p>
